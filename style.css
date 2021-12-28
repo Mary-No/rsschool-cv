@@ -1,0 +1,35 @@
+.image img{
+    border-radius: 50%;
+    border: 3px solid rgb(231, 139, 0);
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+}
+table {
+    display: flex;
+    width: 100%;
+    border: 0;
+}
+
+.first_column {
+    width: 30%;
+}
+.discr {
+    margin: 30px;
+}
+.icons {
+    width: 20px;
+    margin-right: 10px;
+    
+}
+#name {
+    color: rgb(231, 139, 0);
+}
+.hobbis{
+    margin-left: 5%;
+
+}
+.hobbis b {
+    color: rgb(231, 139, 0);
+    text-transform: uppercase;
+}

@@ -1,1 +1,1 @@
-https://mary-no.github.io/rsschool-cv/
+https://mary-no.github.io/rsschool-cv/cv

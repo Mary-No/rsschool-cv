@@ -1,3 +1,63 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a:hover{
+  color: #F76C6C;
+}
+
+
+
+
 body{
     font-family: 'Noto Sans Japanese', sans-serif;
     margin: 0;
@@ -5,138 +65,271 @@ body{
     flex-direction: column;
     justify-content: space-between; */
 }
-
-
-.image img {
-    border-radius: 50%;
-    border: 6px dotted rgb(0, 192, 102);
-    flex-direction: row;
-    justify-content: center;
+.nav{
+    width: 100%;
+    background-color: #24305E;
+    padding: 18px 30px 18px 0px;
     
 }
-
-.container {
-    max-width: 1440px;
+.header-container{
+    width: 90%;
     margin: 0 auto;
-  }
-
-.nav-list {
+}
+.nav-list{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    background-color: #fce7f3;
-    margin-top: 0;
-    padding: 10px 0 10px 0;
+    justify-content: right;
+
 }
-  
-html {
-    scroll-behavior: smooth; 
+.nav-item:not(:last-child){
+    margin-right: 35px;
+
 }
- 
-  .nav-link {
-    padding: 0 20px;
-    line-height: 50px;
-    text-decoration: none;
-    color:rgb(179, 0, 125);
+.nav-link{
+    text-decoration: none; 
     text-transform: uppercase;
-    transition: .3s;
-    
-  }
-  .nav-item a:hover {
-    color: #00c066;
-  }
-  .main-container {
-      max-width: 50vw;
-      margin: 0 auto;
-  }
-  
-
-  #profile {
+    color: white;
+    font-family: 'Noto Sans';
+    letter-spacing: 0.05em;
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+.main_container{
     display: flex;
-    justify-content: space-between;
-    margin: 4em 0 4em 0;
-    border: none;
-  }
-  .name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* __________________________________________________________LEFT_COLUMN________________________ */
+.left_column_image img{
+    border-radius: 50%;
+    border: 15px solid #F76C6C ;
+    margin: 0 auto;
+}
+.left_column{
+    background-color: #F8E9A1;
+    width: 50%;
+    min-height: 100%;
+}
+.left_column_image{
+    margin-top: 60px;
     
-
-  }
-  h2 {
-      font-weight: 200;
-      color:rgb(179, 0, 125);
-  }
-  h1 {
-      font-size: 38px;
-      color: #01a156;
-      font-weight: 200;
-      margin-bottom: 0;
-      margin-top: -10px;
-      letter-spacing: 3px;
-      font-family: 'El Messiri', serif;
-  }
-  .name p {
-      margin-top: 5px;
-      font-size: 24px;
-      color:rgba(179, 0, 125, 0.479);
-  }
-.skills {
-    line-height: 2em;
-    padding-left: 4em;
 }
-.contacts-list {
-    line-height: 2em;
-    padding-left: 3em;
-    list-style: none;
+.section_name{
+    font-family: 'Noto Sans';
+    text-transform: uppercase;
+    color: #F76C6C;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 80px;
+    text-align:center;
+   
+}
+.section_name::after{
+    content: " ";
+    width: 80%;
+    display: block;
+    height: 1.6px;
+    background: white;
+    
+    margin: 18px auto 0px auto;
 
 }
-.contacts-list a {
-    color:rgb(179, 0, 125);
+.details_item{
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
 }
-.code {
-    line-height: 2em;
-    padding-left: 3em;
-
+.details_item_img{
+  margin-left: 40px;
+  height: 19px;
 }
-  .logo {
-      width: 7%;
-      
-  }
-  .container-footer {
-      display: flex;
-      justify-content: space-evenly;
-  }
-  .section {
-      padding: 20px 20px;
-      margin-bottom: 20px;
-      border: 3px dotted rgba(179, 0, 125, 0.479);
-  }
-  footer {
-    margin-top: 64px;
-    background-color: #fce7f3;
-  }
-  .github {
-      min-width: 200px;
-      display: flex;
-      justify-content: space-between;
-      margin: 1em 0 1em 0;
-      align-items: center;
-  }
-  .logo {
-      margin: 2em 0 2em 0;
+.details_item_text{
+  margin-left: 10px;
+  color: #24305E;
+  text-decoration: none;
+}
 
-  }
+
+.languages_sect{
+  width: 80%;
+  margin-top: 20px;
+}
+.round{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 6px;
+}
+.lang_item{
+  display: flex;
+  margin-left: 40px;
+  margin-top: 15px;
   
-  @media (max-width: 750px) {
-    body {
-      font-size: 14px;
-    }
-  }
-  @media (max-width: 500px) {
-    body {
-      font-size: 10px;
-    }
-  }
+}
+.rounds{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  
+}
+.lang_item p{
+  color: #24305E;
+  
+}
+.full{
+  background-color: #374785;
+}
+.hobbies_list li{
+  list-style: inside;
+  color: #24305E;
+}
+.hobbies_list{
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+/* ____________________________________________RIGHT_COLUMN__________________________________________ */
+
+.right_column{
+  margin: 2% 0px 5% 5%;
+}
+.right_section_name{
+  font-family: 'Noto Sans';
+  text-transform: uppercase;
+  color: #374785;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+  line-height: 18px;
+  margin-top: 60px;
+  
+ 
+}
+.right_section_name::after{
+  content: " ";
+  width: 100%;
+  display: block;
+  height: 1.6px;
+  background: #A8D0E6;
+  
+  margin: 18px auto 20px auto;
+
+}
+.profile_text{
+  font-size: 18px;
+  color: #24305E;
+  
+}
+.right_section_item_name{
+  color: #F76C6C;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.right_section_item_name::before{
+  content: " ";
+  width: 5px;
+  height: 5px;
+  background-color: #F76C6C;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  
+}
+.right_section_item{
+  display: flex;
+  color: #F76C6C;
+  justify-content: space-between;
+}
+.discription{
+  font-size: 18px;
+  color: #24305E;
+  margin-top: 12px;
+
+}
+.tech_skills_list{
+  width: 48%;
+}
+.tech_skills_name{
+  color: #F76C6C;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+.tech_skills_item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  align-items: center;
+}
+.sk_rounds{
+  display: flex;
+}
+.sk_round{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #A8D0E6;
+  margin-right: 8px;
+
+}
+.full_sk{
+  background-color: #F8E9A1;
+}
+.project_link{
+  font-size: 18px;
+  color: #24305E;
+  text-decoration: none;
+}
+code{
+  font-size: 14px;
+}
+
+
+
+
+.container-footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.section {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+ 
+}
+footer {
+ 
+background-color: #24305E;
+}
+.github {
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0 1em 0;
+  align-items: center;
+}
+.logo {
+  width: 7%;
+  margin: 2em 0 2em 0;
+}
+.github p{
+  color: white;
+}
+.github p a{
+  color: white;
+  text-decoration: none;
+}
+.github p a:hover{
+  color: #F76C6C;
+}
